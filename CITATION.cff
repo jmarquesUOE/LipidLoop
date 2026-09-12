@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use LipidLoop, please cite the software and the paper."
-title: "LipidLoop: an open, error-controlled lipidomics pipeline that closes the loop between identification and acquisition"
+title: "LipidLoop: a target-decoy lipidomics pipeline with retention-time evidence and acquisition feedback"
 version: 1.0.0
 date-released: 2026-09-12
 license: MIT

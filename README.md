@@ -98,9 +98,8 @@ sample. Details and the data behind each number are in `paper/`.
 
 ## Citing
 
-Marques, J. G.; von Kriegsheim, A. LipidLoop: an open, error-controlled lipidomics pipeline that
-closes the loop between identification and acquisition, validated across five instrument vendors.
-Manuscript in preparation (2026). Software: this repository, release 1.0.0 (`CITATION.cff`).
+Marques, J. G.; von Kriegsheim, A. LipidLoop: a target-decoy lipidomics pipeline with
+retention-time evidence and acquisition feedback. Manuscript in preparation (2026). Software: this repository, release 1.0.0 (`CITATION.cff`).
 
 ## Licence
 
