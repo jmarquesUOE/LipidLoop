@@ -33,6 +33,7 @@ from .correlate import CorrelationFilter
 from .convert import Converter, needs_conversion
 from .features import FeatureParams, run_feature_detection
 from .mgf import read_mzml_ms2
+from .ms2_calibration import check_ms2_tolerance, measure_ms2_axis
 from .peaks import sum_composition
 from .peakfinder import PeakFinder, write_results
 from .purity import read_fatty_acids
@@ -83,6 +84,14 @@ class RunConfig:
 
     ms1_tol: float = 0.01
     ms2_tol: float = 0.01
+    # The MS2 axis is measured on every run from calibrant ions (ms2_calibration.py). "auto" keeps
+    # `ms2_tol` when it can belong to the analyzer that produced the spectra (an Orbitrap or a TOF
+    # at 0.01 Da) and replaces it, offset included, when it cannot (an ion trap needs ~0.3 Da and
+    # reads tens of mDa low). True and False force the behaviour. Measured values are written to
+    # run_config.json either way.
+    derive_ms2_tol: "bool | str" = "auto"
+    ms2_offset_da: float = 0.0
+    measured_ms2: dict = field(default_factory=dict)
     min_ms2_mass: float = 61.0
     # Artefact handling. `screen_artefacts` detects them per file on every run and is ON:
     # a hard-coded m/z would be right for one instrument in one period and useless to anyone
@@ -331,6 +340,22 @@ def run(config: RunConfig, log=None) -> PipelineOutput:
     roles = dict(infer_roles([Path(p).stem for p in mzml_files], sample_types))
     roles.update(config.sample_roles)
 
+    # ── the MS2 axis, measured from calibrant ions before any spectrum is scored ─────────────
+    ms2_cal = measure_ms2_axis(search_files, roles=roles, log=say) if search_files else None
+    if ms2_cal is not None:
+        say(str(ms2_cal))
+        derived_window, message, plausible = check_ms2_tolerance(config.ms2_tol, ms2_cal)
+        say(message)
+        mode = config.derive_ms2_tol
+        use = (bool(ms2_cal.usable) and not plausible) if mode == "auto" else (bool(mode) and bool(ms2_cal.usable))
+        if use:
+            config = replace(config, ms2_tol=float(derived_window), ms2_offset_da=float(ms2_cal.offset_da))
+            say(f"ms2_tol derived from this run: {config.ms2_tol} Da, fragment m/z corrected by "
+                f"{-1000 * config.ms2_offset_da:+.1f} mDa before scoring"
+                + ("  (configured value was implausible for this analyzer)" if mode == "auto" else ""))
+        config.measured_ms2 = {**ms2_cal.to_dict(), "decision": "derived" if use else "kept",
+                               "ms2_tol_used": config.ms2_tol, "offset_applied_da": config.ms2_offset_da}
+
     result_files: dict[str, Path] = {}
     artefacts_seen: dict[str, list] = {}
     # Every MS2 scan in the batch, `(key, precursor_mz, retention_minutes)`, and which keys were
@@ -360,6 +385,9 @@ def run(config: RunConfig, log=None) -> PipelineOutput:
         if config.mass_offset_ppm:
             for ms2 in spectra:
                 ms2.precursor -= ms2.precursor * config.mass_offset_ppm * 1e-6
+        if config.ms2_offset_da:
+            for ms2 in spectra:
+                ms2.mz = [m - config.ms2_offset_da for m in ms2.mz]
         for ms2 in spectra:
             key = (stem, ms2.number)
             all_scans.append((key, ms2.precursor, ms2.retention))
