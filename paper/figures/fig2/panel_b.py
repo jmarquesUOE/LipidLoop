@@ -42,7 +42,7 @@ def draw(ax):
         ax.text(xi, 101.5, f"n = {r['reference']}", ha="center", va="bottom", fontsize=6)
     ax.set_xticks(x)
     ax.set_xticklabels([f"{r['set']}\n{'positive' if r['polarity'] == 'Pos' else 'negative'}" for r in rows])
-    ax.set_ylabel("Reference molecules (%)")
+    ax.set_ylabel("Molecules (%)")
     ax.set_ylim(0, 112)
     ax.legend(loc="upper center", fontsize=6, ncol=2, bbox_to_anchor=(0.5, -0.28), handlelength=1.2, columnspacing=1.0)
     return ax
