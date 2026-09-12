@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+# raw data, converted data and spectral libraries never live in the tree
+*.raw
+*.d/
+*.wiff
+*.mzML
+*.msp
+data/mzml/
+data/tools/
+reference/
+# run outputs
+Analysis_*/
+paper/figures/*/panels/
+paper/validation/.cache/

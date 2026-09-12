@@ -1,0 +1,6 @@
+study,instrument,polarity,drift_ppm,before,after,decoy_before,decoy_after
+MTBLS5163,maXis II,Pos,17.1,232,258,2,0
+MTBKS222_Waters,Xevo G2,Pos,9.3,199,211,0,0
+MTBKS222_Waters,Xevo G2,Neg,9.3,41,50,0,0
+ST004797,ZenoTOF 7600,Pos,2.6,551,561,1,0
+ST004797,ZenoTOF 7600,Neg,2.6,111,117,0,0

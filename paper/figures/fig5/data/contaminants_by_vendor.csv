@@ -1,0 +1,9 @@
+contaminant,found_by,vendors,wasted_scans
+PEG,series matcher,Agilent;Bruker;Sciex;Thermo,95428
+sodium acetate,series matcher,Agilent;Bruker;Sciex;Thermo,49872
+DEHP (phthalate),formula match,Agilent;Bruker;Sciex;Thermo,16342
+cholesterol in-source fragment,formula match,Agilent;Bruker;Sciex;Thermo,6711
+polysiloxane,series matcher,Bruker;Sciex;Thermo,191958
+sodium formate,series matcher,Bruker;Sciex;Thermo,235807
+free fatty acids,formula match,Agilent;Sciex;Thermo,12244
+"DBP, erucamide",formula match,Bruker;Sciex;Thermo,13169

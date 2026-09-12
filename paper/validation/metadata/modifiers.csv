@@ -1,0 +1,18 @@
+dataset,modifier,source,evidence
+ST003514,acetate,mwTab CH:SOLVENT_A,"10 mM Ammonium acetate, 0.2 mM Ammonium fluoride"
+ST000987,formate,mwTab CH:SOLVENT_A,10mM Ammonium Formate +10mM Formic Acid
+ST000988,formate,mwTab CH:SOLVENT_A,10mM Ammonium Formate +10mM Formic Acid
+ST000991,formate,mwTab CH:SOLVENT_A,10mM Ammonium Formate +10mM Formic Acid
+ST001027,formate,mwTab,ammonium formate stated
+ST003052,formate,mwTab CH:SOLVENT_A,10 mM ammonium formate with 0.1% formic acid
+ST003077,formate,mwTab CH:SOLVENT_A,ammonium formate + 0.1% formic acid
+ST004503,formate,mwTab CH:SOLVENT_A,5 mM ammonium formate; 0.1% Formic acid
+ST004626,formate,mwTab CH:SOLVENT_A,5 mM ammonium formate; 0.1% Formic acid
+ST004650,formate,mwTab CH:SOLVENT_B,10 mM Ammonium Formate + 0.1% Formic Acid
+ST004651,formate,mwTab CH:SOLVENT_B,10 mM Ammonium Formate; 0.1% Formic Acid
+ST004797,formate,mwTab CH:SOLVENT_A,"0.1% formic acid only, no ammonium salt"
+MTBLS5163,formate,ISA-Tab protocol,60:39.9:0.1 acetonitrile:water:formic acid with 10 mM ammonium formate
+MTBLS14002,formate,ISA-Tab protocol,10 mM ammonium formate in methanol/acetonitrile/water
+ST002705,formate,background salt clusters (--detect-modifier),sodium formate dominates sodium acetate in negative mode
+MSV000094718,formate,background salt clusters (--detect-modifier),sodium formate vs sodium acetate 29:1 across the 9 BLE negative files
+MSV000095868,UNKNOWN,,MassIVE carries no structured method; needs the paper

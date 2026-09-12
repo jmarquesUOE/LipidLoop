@@ -1,0 +1,6 @@
+sample,group,window
+GLA_X500R_Lipids_QC_DDA_mz300-1100_1,pooledQC,mz300-1100
+GLA_X500R_Lipids_QC_DDA_mz300-1100_2,pooledQC,mz300-1100
+GLA_X500R_Lipids_QC_DDA_mz300-700_1,pooledQC,mz300-700
+GLA_X500R_Lipids_QC_DDA_mz300-700_2,pooledQC,mz300-700
+GLA_X500R_Lipids_QC_DDA_mz700-1100_2,pooledQC,mz700-1100

@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use LipidLoop, please cite the software and the paper."
+title: "LipidLoop: an open, error-controlled lipidomics pipeline that closes the loop between identification and acquisition"
+version: 1.0.0
+date-released: 2026-09-12
+license: MIT
+repository-code: "https://github.com/jmarquesUOE/LipidLoop"
+authors:
+  - family-names: Marques
+    given-names: Jair G.
+    affiliation: "Cancer Centre, Institute of Genetics and Cancer, University of Edinburgh"
+  - family-names: von Kriegsheim
+    given-names: Alex
+    affiliation: "Cancer Centre, Institute of Genetics and Cancer, University of Edinburgh"

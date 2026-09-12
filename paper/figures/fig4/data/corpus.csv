@@ -1,0 +1,16 @@
+dataset,vendor,instrument,nist,injections,id_rows,species,decoy_fdr,deposit_species,agreement
+MTBKS222_Waters,Waters,Xevo G2 QTOF,1,17,260,191,0.0,145,78.6
+MTBKS222_Thermo,Thermo,Q Exactive Plus,1,8,467,315,0.0,309,65.0
+ST003077,Thermo,Exploris 480,0,14,1708,446,0.12,415,59.3
+MTBKS222_IMS_Normal,Sciex,TripleTOF 6600,1,12,711,400,0.0,503,54.9
+MTBKS222_IMS_HighMass,Sciex,TripleTOF 6600 (high mass),1,12,675,408,0.0,497,53.5
+MTBKS222_Agilent,Agilent,6546 QTOF,1,12,749,423,0.0,550,51.1
+MTBLS5163,Bruker,maXis II,0,50,359,218,0.0,59,49.2
+ST003514,Agilent,6545 QTOF,1,20,562,254,0.0,370,48.9
+MTBKS222_BrukerBAF,Bruker,timsTOF Pro,1,13,206,146,0.0,261,44.1
+ST004797,Sciex,ZenoTOF 7600,0,224,2401,423,0.29,1066,25.4
+MSV000095868,Agilent,6530A QTOF,0,184,113,71,0.0,,
+ST000991_DDA,Sciex,X500R QTOF,0,5,325,228,0.61,,
+ST002705,Bruker,micrOTOF-Q II,0,28,479,254,0.21,,
+ST003052,Thermo,Q Exactive HF,0,120,275,121,0.36,,
+ST004797_oxtg,Sciex,ZenoTOF 7600 (oxTG),0,19,617,236,0.0,,

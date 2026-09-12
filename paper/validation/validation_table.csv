@@ -1,0 +1,31 @@
+dataset,repository,instrument,type,pos,neg,injections,deposit_n,sample_type,species,species_source,study_group,assay_scope,our_ids,their_names,shared,of_theirs,of_ours,status,deposited_rt
+Rat_Heart_Lumos,in-house,,QTOF,0,0,0,,,,not stated,Rat_Heart_Lumos,unstated,0,0,,,,no names deposited,
+MSV000094718,MassIVE,Agilent QTOF,QTOF,69,18,87,,Liver + solvent blanks,Bos taurus,massive:proxi,MSV000094718,unstated,439,0,,,,no names deposited,
+MSV000095868,MassIVE,Agilent QTOF,QTOF,92,92,184,,Gut microbiome / caecal,Mus musculus,massive:proxi,MSV000095868,unstated,115,0,,,,no names deposited,
+MTBKS222,MetaboLights,Thermo Q Exactive Plus,Orbitrap,4,4,8,,"Blood (plasma), NIST SRM 1950",,not stated,MTBKS222,unstated,329,309,211,68.3,64.1,ok,all
+MTBKS222_Agilent,MetaboLights,,QTOF,6,6,12,,,,not stated,MTBKS222_Agilent,unstated,479,550,303,55.1,63.3,ok,
+MTBKS222_BrukerBAF,MetaboLights,,QTOF,6,7,13,,,,not stated,MTBKS222_BrukerBAF,unstated,164,261,128,49.0,78.0,ok,
+MTBKS222_IMS_HighMass,MetaboLights,,QTOF,6,6,12,,,,not stated,MTBKS222_IMS_HighMass,unstated,479,497,292,58.8,61.0,ok,
+MTBKS222_IMS_Normal,MetaboLights,,QTOF,6,6,12,,,,not stated,MTBKS222_IMS_Normal,unstated,482,503,304,60.4,63.1,ok,
+MTBKS222_Sciex,MetaboLights,,QTOF,12,12,24,,,,not stated,MTBKS222_Sciex,unstated,532,411,275,66.9,51.7,ok,
+MTBKS222_Thermo,MetaboLights,,QTOF,4,4,8,,,,not stated,MTBKS222_Thermo,unstated,329,309,211,68.3,64.1,ok,
+MTBKS222_UCDavis,MetaboLights,,QTOF,4,4,8,,,,not stated,MTBKS222_UCDavis,unstated,20,411,11,2.7,55.0,ok,
+MTBKS222_Waters,MetaboLights,,QTOF,9,8,17,,,,not stated,MTBKS222_Waters,unstated,211,145,125,86.2,59.2,ok,
+MTBLS2016,MetaboLights,Bruker maXis QTOF,QTOF,147,0,147,,Whole organism,Caenorhabditis elegans,metabolights:ws,MTBLS2016,unstated,0,289,,,,no run,38%
+MTBLS5163,MetaboLights,Bruker maXis II QTOF,QTOF,50,0,50,,Dendritic cells,Mus musculus,metabolights:ws,MTBLS5163,unstated,332,59,42,71.2,12.7,ok,all
+ST000987,Workbench,Leco Citius LC-HRT,QTOF,153,0,153,153,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,nine-platform,lipidomics,0,273,,,,no run,none
+ST000991,Workbench,ABI Sciex X500R QTOF,QTOF,159,0,159,153,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,nine-platform,lipidomics,259,273,174,63.7,67.2,ok,none
+ST000991_DDA,Workbench,,QTOF,5,0,5,,,,not stated,ST000991_DDA,unstated,262,0,,,,no names deposited,
+ST002705,Workbench,Bruker micrOTOF-Q II QTOF,QTOF,16,12,28,24,sub ventricular zone tissue,Mus musculus,mwtab:SU:SUBJECT_SPECIES,ST002705,lipidomics,356,0,,,,no names deposited,
+ST003052,Workbench,Thermo Q Exactive HF,Orbitrap,59,61,120,122,Brain,Mus musculus,mwtab:SU:SUBJECT_SPECIES,ST003052,lipidomics,203,0,,,,no names deposited,
+ST003077,Workbench,Thermo Orbitrap Exploris 480,Orbitrap,0,0,0,74,"plasma, adipose, liver, muscle, heart, kidney, intestine, adipose",Mus musculus,mwtab:SU:SUBJECT_SPECIES,ST003077,lipidomics,0,415,,,,no run,none
+ST003514,Workbench,Agilent 6545 QTOF,QTOF,15,15,30,61,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,ST003514,lipidomics,328,370,224,60.5,68.3,ok,none
+ST004503,Workbench,Waters Xevo-G2-XS,QTOF,131,0,131,372,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,CSU-benchmark-RP,metabolomics,14,0,,,,no names deposited,
+ST004626,Workbench,Waters Xevo-G2-XS,QTOF,0,109,109,374,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,CSU-benchmark-RP,metabolomics,0,0,,,,no names deposited,
+ST004650,Workbench,Waters Xevo-G2-XS,QTOF,156,0,156,372,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,CSU-benchmark-HILIC,metabolomics (HILIC),14,0,,,,no names deposited,
+ST004651,Workbench,Waters Xevo-G2-XS,QTOF,0,106,106,372,Blood (plasma),Homo sapiens,mwtab:SU:SUBJECT_SPECIES,CSU-benchmark-HILIC,metabolomics (HILIC),70,0,,,,no names deposited,
+ST004797,Workbench,ABI Sciex 7600 ZenoTOF,QTOF,112,112,224,79,Plasma,Rattus norvegicus,mwtab:SU:SUBJECT_SPECIES,ST004797,lipidomics,699,1066,333,31.2,47.6,ok,none
+ST004797_centroid,Workbench,,QTOF,88,112,200,,,,not stated,ST004797_centroid,unstated,0,0,,,,no names deposited,
+ST004797_oxtg,Workbench,,QTOF,19,0,19,,,,not stated,ST004797_oxtg,unstated,386,0,,,,no names deposited,
+Skin_QEplus,in-house,,QTOF,0,0,0,,,,not stated,Skin_QEplus,unstated,0,0,,,,no names deposited,
+Skin_QEplus,in-house,Q Exactive Plus,Orbitrap,0,0,0,,Skin organoid,,not stated,Skin_QEplus,unstated,0,0,,,,no names deposited,

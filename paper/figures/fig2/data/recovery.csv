@@ -1,0 +1,5 @@
+set,polarity,reference,recovered,other_polarity,absent,standard,absent_names,other_names
+Set 1,Pos,514,511,0,2,1,HexCer[NS] d40:1; TG 59:0,
+Set 1,Neg,132,125,5,2,0,PC O-38:1; Plasmanyl-PE O-36:0,PC O-38:2; PE O-36:1; PE O-36:3; PE O-38:3; PE O-40:4
+Set 2,Pos,210,209,0,0,1,,
+Set 2,Neg,111,103,5,3,0,Cer[NDS] d39:1; Cer[NDS] d42:0; PE-NMe2 34:3,Cer[NS] d42:1; PC O-36:1; PE O-34:1; SM d32:0; SM d41:0
