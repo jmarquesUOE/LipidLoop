@@ -32,7 +32,7 @@ CLASSES = [("Set 1", "TG", "Pos"), ("Set 1", "PC", "Pos"), ("Set 2", "TG", "Pos"
 
 
 def retention_rows() -> tuple[list[dict], list[dict]]:
-    from lipidloop.rtls import fit_model, parse_sum_name
+    from lipidex_py.rtls import fit_model, parse_sum_name
     points, models = [], []
     for label, cls, pol in CLASSES:
         run = RUNS[label]
