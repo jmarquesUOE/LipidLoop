@@ -51,14 +51,17 @@ edge(tgt, srch); edge(dc1, srch); edge(dc2, srch)
 edge(srch, offs); edge(offs, pur); edge(pur, chain, "yes"); edge(pur, sumc, "no"); edge(chain, sres); edge(sumc, sres)
 
 # ── 3 feature detection ──────────────────────────────────────────────────────────────────────
-band(720, 250, "3 — FEATURE DETECTION   (+ per-file mass calibration as a second pass)")
-mz3, feat, align, link, drift = row(758, 58, [(110, ".mzML"), (170, "detect features\n(pyOpenMS)"), (170, "align retention\n(pose clustering)"),
-                                              (170, "link injections\n10 ppm, 30 s"), (190, "per-file drift\n≥ 2 ppm?")], "proc", gap=40)
-CELLS[mz3]["kind"] = "input"; dec(drift, 753)
-noise = box(CELLS[link]["x"] - 20, 870, 200, 56, "measure the noise floor\n(reported, not applied)", "proc")
-recal = box(CELLS[drift]["x"] + 20, 870, 240, 56, "write calibrated mzML,\nprecursors shifted too", "proc")
-edge(mz3, feat); edge(feat, align); edge(align, link); edge(link, drift)
-edge(drift, recal, "yes"); edge(recal, feat, "second pass", True); edge(drift, noise, "no")
+band(720, 250, "3 — FEATURE DETECTION   (noise floor measured on every run; per-file mass calibration as a second pass)")
+mz3, noiseq, feat, align, link, drift = row(758, 58, [(90, ".mzML"), (200, "noise threshold within\n2–15× the measured floor?"),
+                                                      (135, "detect features\n(pyOpenMS)"), (140, "align retention\n(pose clustering)"),
+                                                      (135, "link injections\n10 ppm, 30 s"), (150, "per-file drift\n≥ 2 ppm?")], "proc", gap=26)
+CELLS[mz3]["kind"] = "input"; dec(noiseq, 753); dec(drift, 753)
+derive = box(CELLS[noiseq]["x"] + 100 - 122, 870, 245, 56, "derive it from the floor, bounded by\npeak density and feature survival", "proc")
+recal = box(CELLS[drift]["x"] - 40, 870, 230, 56, "write calibrated mzML,\nprecursors shifted too", "proc")
+feats = box(CELLS[align]["x"] - 30, 870, 220, 56, "linked feature table,\none row per consensus feature", "proc")
+edge(mz3, noiseq); edge(noiseq, feat, "yes"); edge(noiseq, derive, "no"); edge(derive, feat)
+edge(feat, align); edge(align, link); edge(link, drift)
+edge(drift, recal, "yes"); edge(recal, feat, "second pass", True, via="under"); edge(drift, feats, "no")
 
 # ── 4 peak finder ────────────────────────────────────────────────────────────────────────────
 band(990, 420, "4 — PEAK FINDER   (join identifications to features, then the reproduced filters)")
@@ -74,7 +77,7 @@ add, ins, red, win = row(1225, 58, [(190, "adduct, dimer or isotope\nof another 
 for d in (add, ins, red, win):
     dec(d, 1220)
 k4c = sink(add, 1330); k4d = sink(ins, 1330); k4e = sink(red, 1330); k4f = sink(win, 1330)
-edge(noise, join); edge(s4, join); edge(join, thr); edge(thr, name, "yes"); edge(thr, k4a, "no")
+edge(feats, join); edge(s4, join); edge(join, thr); edge(thr, name, "yes"); edge(thr, k4a, "no")
 edge(name, rtm); edge(rtm, offm); edge(offm, k4b, "yes"); edge(offm, add, "no")
 edge(add, ins, "no"); edge(add, k4c, "yes"); edge(ins, red, "no"); edge(ins, k4d, "yes")
 edge(red, win, "no"); edge(red, k4e, "yes"); edge(win, k4f, "yes")
