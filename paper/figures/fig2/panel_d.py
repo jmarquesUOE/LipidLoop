@@ -1,4 +1,4 @@
-"""Figure 4D: PE on Set 2 (first arm), the same consensus species measured in both polarities:
+"""Figure 2D: PE on Set 2 (first arm), the same consensus species measured in both polarities:
 log10 median area against log10 consensus concentration, positive and negative mode, with a
 least-squares line per polarity and the within-polarity Spearman rho and slope printed (on log-log
 axes a proportional response has slope 1). The polarity rule keeps PE from negative mode."""

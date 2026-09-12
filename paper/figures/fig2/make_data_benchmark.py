@@ -1,4 +1,4 @@
-"""Figure 4C and 4D data: Set 2 (first arm, no lists) against the NIST SRM 1950 interlaboratory
+"""Figure 2C and 2D data: Set 2 (first arm, no lists) against the NIST SRM 1950 interlaboratory
 consensus (Bowden 2017; reference table built by manuscript/benchmark/build_reference.py).
 
 C: per class family, consensus entries (>= 5 laboratories; the paper's 339) recovered with MS2,

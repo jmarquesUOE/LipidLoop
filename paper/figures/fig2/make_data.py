@@ -108,7 +108,7 @@ def set2_exactness() -> tuple[list[dict], list[dict]]:
 
 
 def recovery() -> list[dict]:
-    from lipidloop.peaks import sum_composition
+    from lipidex_py.peaks import sum_composition
     out = []
     for label, run, ref, std in (("Set 1", SET1_RUN, SET1_REF, "D5TG"), ("Set 2", SET2_RUN, SET2_REF, "D5TG")):
         for pol in ("Pos", "Neg"):
