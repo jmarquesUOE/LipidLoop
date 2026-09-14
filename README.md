@@ -103,5 +103,20 @@ retention-time evidence and acquisition feedback. Manuscript in preparation (202
 
 ## Licence
 
-MIT (see `LICENSE`). The LipiDex and LipidBlast spectral libraries are redistributed under their own
-MIT licences; the two LipiDex tables in `data/lipidex_src/` likewise.
+The **code** in this repository is MIT. See `LICENSE`.
+
+The **spectral library archive**, distributed as a release asset, is not all MIT. It bundles
+material from three sources under different terms, itemised per file in `NOTICE.md`:
+
+* libraries from LipiDex 1.1, verbatim or derived, under the MIT licence of `coongroup/LipiDex`;
+* libraries built from the MS-DIAL Tandem Mass Spectral Atlas under **CC BY 4.0**, which requires
+  attribution, a statement of changes and the licence URI;
+* libraries generated for LipidLoop, under this repository's MIT licence.
+
+`NOTICE.md` is also included inside the archive, because the MIT licence requires its copyright
+notice to travel with every copy and CC BY 4.0 requires the attribution to do the same.
+
+No material from LipiDex 2 is distributed; its repository states no licence. The ganglioside library
+is built from published structures instead, by `scripts/build_ganglioside_library.py`.
+
+The two LipiDex tables in `data/lipidex_src/` are MIT, from `coongroup/LipiDex`.

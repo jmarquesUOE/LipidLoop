@@ -1,12 +1,20 @@
 # A negative-mode ganglioside library
 
-Neither LipiDex version ships one. `LipiDex2_Ganglioside.msp` is 4,305 entries and **every one
-is `[M+H]+`**; LipidBlast and the LipiDex HCD libraries contain no ganglioside entry in any
-polarity. So negative-mode data — where sialylated species ionise best — could not be searched
-for them at all.
+Neither LipiDex version ships one that helps here. LipidBlast and the LipiDex HCD libraries
+contain no ganglioside entry in any polarity, and LipiDex 2's ganglioside library is 4,305 entries
+of which **every one is `[M+H]+`**. So negative-mode data — where sialylated species ionise best —
+could not be searched for them at all.
 
-`scripts/build_ganglioside_negative_library.py` generates one from the species LipiDex 2 already
-enumerates, and the interesting part is what resolution it is written at.
+`scripts/build_ganglioside_library.py` generates one **reading no third-party file**: the glycan
+compositions are the published Svennerholm structures, ceramide masses come from the elemental
+formula, the species grid is enumerated from sphingoid bases C14-C22 against N-acyl chains C10-C32,
+and the three product ions are the ones measured in this laboratory's own spectra. 1,232 entries.
+The interesting part is what resolution it is written at.
+
+⚠ It replaces `build_ganglioside_negative_library.py`, which took its species list from LipiDex 2.
+That script is gone and no library derived from LipiDex 2 is distributed, because the LipiDex 2
+repository states no licence. The rebuild also corrects an inherited error: GD2-NGNA was 84.02 Da
+light in the old file. No GD2 was ever identified here, so nothing reported depended on it.
 
 ## What the fragmentation actually supports
 
