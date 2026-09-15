@@ -28,10 +28,11 @@ from .score import INT_WEIGHT, MASS_WEIGHT, dot_product
 
 # The default library set, IN LOAD ORDER — the order breaks ties between entries that score
 # identically, and this one reproduces the reference run. Append to it rather than reordering.
-# LipiDex2_Ganglioside is from the LipiDex 2 install; the rest are LipiDex 1's. It contributes
-# only GM3 here (see docs/LIBRARY_VERSIONS.md) and nothing it adds displaces anything.
-DEFAULT_LIBRARIES = ("LipidBlast_Formic", "LipiDex_HCD_Formic", "LipiDex_HCD_Hydroxy",
-                     "LipiDex2_Ganglioside", "Ganglioside_Negative_SumComposition",
+# Every library here is LipiDex 1's (MIT) or built in this project. The LipiDex 2 ganglioside
+# library was removed on 2026-09-13: LipiDex 2 grants no licence, and the negative-mode ganglioside
+# library is now enumerated from the Svennerholm structures instead of from it
+# (scripts/build_ganglioside_library.py, manuscript/licensing/).
+DEFAULT_LIBRARIES = ("LipidBlast_Formic", "LipiDex_HCD_Formic", "LipiDex_HCD_Hydroxy", "Ganglioside_Negative_SumComposition",
                      "Ceramides_Positive")
 
 # Free fatty acids are configured separately (`RunConfig.fatty_acid_libraries`) rather than mixed
