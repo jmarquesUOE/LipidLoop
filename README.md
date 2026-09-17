@@ -50,9 +50,13 @@ curl -L -o lipidloop_libraries.zip \
 unzip lipidloop_libraries.zip -d data/libraries/
 ```
 
-The archive holds the LipiDex and LipidBlast libraries (MIT), the libraries generated here
-(`data/libraries/PROVENANCE_*.md` records where each came from and what was changed) and the
-matching decoy libraries. Decoys can be regenerated with `scripts/make_decoy_library.py`.
+The archive holds 57 files: the LipiDex and LipidBlast libraries, the libraries generated here, the
+matching decoy libraries, the per-library `PROVENANCE_*.md` files recording where each came from and
+what was changed, and `NOTICE.md`, which states the licence of every file. Decoys can be regenerated
+with `scripts/make_decoy_library.py`.
+
+It deliberately contains no material derived from LipiDex 2, which states no licence, and no
+`HOLDOUT_*` file, since those are test fixtures rather than search libraries.
 
 **Converters.** Thermo `.raw` needs [ThermoRawFileParser](https://github.com/compomics/ThermoRawFileParser)
 (put it in `data/tools/ThermoRawFileParser/` or pass `--set thermo_parser=<path>`); Agilent, Waters
