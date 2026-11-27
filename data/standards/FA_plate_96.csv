@@ -1,0 +1,97 @@
+well,name,supplier_short,formula,neutral_mono_mass,expected_mz_[M-H]-,our_notation,carbons,double_bonds,rt_anchor,anchor_note
+A1,Mesaconic acid,(E)-2-Me-4:1 di-acid,C5H6O4,130.02661,129.01933,,5,,no,not a plain fatty acid — extra oxygens or heteroatoms
+A2,Myristoleic acid,C14:1,C14H26O2,226.19328,225.18600,FA 14:1,14,1,yes,
+A3,Isomyristic acid,12-Me-13:0,C14H28O2,228.20893,227.20165,FA 14:0,14,0,no,another compound is the canonical FA 14:0: Myristic acid
+A4,2-Hydroxymyristic acid,2-OH-14:0,C14H28O3,244.20384,243.19657,,14,,no,not a plain fatty acid — extra oxygens or heteroatoms
+A5,Isopalmitic acid,14-Me-15:0,C16H32O2,256.24023,255.23295,FA 16:0,16,0,no,another compound is the canonical FA 16:0: Palmitic acid
+A6,14-Methylpalmitic acid,14-Me-16:0,C17H34O2,270.25588,269.24860,FA 17:0,17,0,no,another compound is the canonical FA 17:0: Margaric acid
+A7,2-Hydroxyhexadecanoic acid,11-OH-16:0,C16H32O3,272.23514,271.22787,,16,,no,not a plain fatty acid — extra oxygens or heteroatoms
+A8,Isostearic acid,16-Me-17:0,C18H36O2,284.27153,283.26425,FA 18:0,18,0,no,another compound is the canonical FA 18:0: Stearic acid
+A9,17-Methylstearic acid,17-Me-18:0,C19H38O2,298.28718,297.27990,FA 19:0,19,0,no,another compound is the canonical FA 19:0: Nonadecanoic acid
+A10,trans-11-Eicosenoic acid,C20:1,C20H38O2,310.28718,309.27990,FA 20:1,20,1,no,another compound is the canonical FA 20:1: Gondoic acid
+A11,Docosapentaenoic acid,C-22:5,C22H34O2,330.25588,329.24860,FA 22:5,22,5,no,another compound is the canonical FA 22:5: DPA n-3
+A12,Heptacosanoic acid,C27:0,C27H54O2,410.41238,409.40510,FA 27:0,27,0,yes,
+B1,alpha-Linolenic acid,C18:3,C18H30O2,278.22458,277.21730,FA 18:3,18,3,yes,
+B2,Oleic acid,C18:1,C18H34O2,282.25588,281.24860,FA 18:1,18,1,yes,
+B3,Dihomo-g-linolenic acid,C20:3,C20H34O2,306.25588,305.24860,FA 20:3,20,3,yes,
+B4,Eicosadienoic acid,C20:2,C20H36O2,308.27153,307.26425,FA 20:2,20,2,yes,
+B5,Phytanic acid,C20:0,C20H40O2,312.30283,311.29555,FA 20:0,20,0,no,another compound is the canonical FA 20:0: Arachidic acid
+B6,Heneicosanoic acid,C21:0,C21H42O2,326.31848,325.31120,FA 21:0,21,0,yes,
+B7,Behenic acid,C22:0,C22H44O2,340.33413,339.32685,FA 22:0,22,0,yes,
+B8,Tricosanoic acid,C23:0,C23H46O2,354.34978,353.34250,FA 23:0,23,0,yes,
+B9,Nervonic acid,C24:1,C24H46O2,366.34978,365.34250,FA 24:1,24,1,yes,
+B10,Lignoceric acid,C24:0,C24H48O2,368.36543,367.35815,FA 24:0,24,0,yes,
+B11,Pentacosanoic acid,C25:0,C25H50O2,382.38108,381.37380,FA 25:0,25,0,yes,
+B12,Montanic acid,C28:0,C28H56O2,424.42803,423.42075,FA 28:0,28,0,yes,
+C1,Valeric acid,C5:0,C5H10O2,102.06808,101.06080,FA 5:0,5,0,yes,
+C2,Cis-2-Decenoic acid,C10:1,C10H18O2,170.13068,169.12340,FA 10:1,10,1,no,another compound is the canonical FA 10:1: Caproleic acid
+C3,Undecanoic acid,C11:0,C11H22O2,186.16198,185.15470,FA 11:0,11,0,yes,
+C4,Tridecanoic acid,C13:0,C13H26O2,214.19328,213.18600,FA 13:0,13,0,yes,
+C5,Myristic acid,C14:0,C14H28O2,228.20893,227.20165,FA 14:0,14,0,yes,
+C6,iso-Heptadecanoic acid,15Me-16:0,C17H34O2,270.25588,269.24860,FA 17:0,17,0,no,another compound is the canonical FA 17:0: Margaric acid
+C7,Sterculic acid,C19:1,C19H34O2,294.25588,293.24860,FA 19:2,19,2,yes,
+C8,Eicosapentaenoic acid,C20:5,C20H30O2,302.22458,301.21730,FA 20:5,20,5,yes,
+C9,Gondoic acid,C20:1,C20H38O2,310.28718,309.27990,FA 20:1,20,1,yes,
+C10,Arachidic acid,C20:0,C20H40O2,312.30283,311.29555,FA 20:0,20,0,yes,
+C11,DPA n-3,C22:5,C22H34O2,330.25588,329.24860,FA 22:5,22,5,yes,
+C12,Melissic acid,C30:0,C30H60O2,452.45933,451.45205,FA 30:0,30,0,yes,
+D1,2-Ethylacrylic acid,"2-Ethyl,2-3:1",C5H8O2,100.05243,99.04515,FA 5:1,5,1,no,another compound is the canonical FA 5:1: Tiglic acid
+D2,2-Methylbutyric acid,2-Me-4:0,C5H10O2,102.06808,101.06080,FA 5:0,5,0,no,another compound is the canonical FA 5:0: Valeric acid
+D3,2-Methyl-4-pentenoic acid,"2-Me,4e-5:1",C6H10O2,114.06808,113.06080,FA 6:1,6,1,no,another compound is the canonical FA 6:1: 3-Hexenoic acid
+D4,2-Hydroxy-2-methylbutyric acid,"2-OH,2-Me-4:0",C5H10O3,118.06299,117.05572,,5,,no,not a plain fatty acid — extra oxygens or heteroatoms
+D5,2-Ethyl-2-hydroxybutyric acid,"2-Ethyl,2-OH-4:0",C6H12O3,132.07864,131.07137,,6,,no,not a plain fatty acid — extra oxygens or heteroatoms
+D6,"trans,trans-Muconic acid",2t4t-6:0-diacid,C6H6O4,142.02661,141.01933,,6,,no,not a plain fatty acid — extra oxygens or heteroatoms
+D7,2-Methylheptanoic acid,2-Me-7:0,C8H16O2,144.11503,143.10775,FA 8:0,8,0,no,another compound is the canonical FA 8:0: Caprylic acid
+D8,"3,3-Dimethylglutaric acid","3,3-diMe-5:0",C7H12O4,160.07356,159.06628,,7,,no,not a plain fatty acid — extra oxygens or heteroatoms
+D9,5-Dodecenoic acid,C12:1,C12H22O2,198.16198,197.15470,FA 12:1,12,1,yes,
+D10,17-Octadecynoic acid,C18:1,C18H32O2,280.24023,279.23295,FA 18:2,18,2,no,another compound is the canonical FA 18:2: Linoleic acid
+D11,12-Methyltetradecanoic acid,12-methyl-C15:0,C15H30O2,242.22458,241.21730,FA 15:0,15,0,no,another compound is the canonical FA 15:0: Pentadecanoic acid
+D12,Rumenic acid,C18:2,C18H32O2,280.24023,279.23295,FA 18:2,18,2,no,another compound is the canonical FA 18:2: Linoleic acid
+E1,Tiglic acid,2-Me-2t-4:1,C5H8O2,100.05243,99.04515,FA 5:1,5,1,yes,
+E2,2-Hydroxyhexanoic acid,2-OH-6:0,C6H12O3,132.07864,131.07137,,6,,no,not a plain fatty acid — extra oxygens or heteroatoms
+E3,2-Octenoic acid,C8:1,C8H14O2,142.09938,141.09210,FA 8:1,8,1,yes,
+E4,Undecylenic acid,C11:1,C11H20O2,184.14633,183.13905,FA 11:1,11,1,yes,
+E5,Dihydrolipoate,C8:0,C8H16O2S2,208.05917,207.05190,,8,,no,not a plain fatty acid — extra oxygens or heteroatoms
+E6,Traumatic acid,2t-12:1-diacid,C12H20O4,228.13616,227.12888,,12,,no,not a plain fatty acid — extra oxygens or heteroatoms
+E7,Pentadecanoic acid,C15:0,C15H30O2,242.22458,241.21730,FA 15:0,15,0,yes,
+E8,Margaric acid,C17:0,C17H34O2,270.25588,269.24860,FA 17:0,17,0,yes,
+E9,Nonadecanoic acid,C19:0,C19H38O2,298.28718,297.27990,FA 19:0,19,0,yes,
+E10,Arachidonic acid,C20:4,C20H32O2,304.24023,303.23295,FA 20:4,20,4,yes,
+E11,Mead acid,C20:3,C20H34O2,306.25588,305.24860,FA 20:3,20,3,no,another compound is the canonical FA 20:3: Dihomo-g-linolenic acid
+E12,Docosahexaenoic acid,C22:6,C22H32O2,328.24023,327.23295,FA 22:6,22,6,yes,
+F1,Isobutyric acid,2-Me-3:0,C4H8O2,88.05243,87.04515,FA 4:0,4,0,no,another compound is the canonical FA 4:0: Butyric acid
+F2,3-Hydroxyoctanoic acid,C8:0,C8H16O3,160.10994,159.10267,,8,,no,not a plain fatty acid — extra oxygens or heteroatoms
+F3,Caproleic acid,C10:1,C10H18O2,170.13068,169.12340,FA 10:1,10,1,yes,
+F4,Capric acid,C10:0,C10H20O2,172.14633,171.13905,FA 10:0,10,0,yes,
+F5,10-hydroxy-2-decenoic acid,C10:1,C10H18O3,186.12559,185.11832,,10,,no,not a plain fatty acid — extra oxygens or heteroatoms
+F6,10-Hydroxydecanoic acid,C10:0,C10H20O3,188.14124,187.13397,,10,,no,not a plain fatty acid — extra oxygens or heteroatoms
+F7,Palmitoleic acid,C16:1,C16H30O2,254.22458,253.21730,FA 16:1,16,1,yes,
+F8,Ximenynic acid,C18:2,C18H30O2,278.22458,277.21730,FA 18:3,18,3,no,another compound is the canonical FA 18:3: alpha-Linolenic acid
+F9,Linoleic acid,C18:2,C18H32O2,280.24023,279.23295,FA 18:2,18,2,yes,
+F10,Petroselinic acid,C18:1,C18H34O2,282.25588,281.24860,FA 18:1,18,1,no,another compound is the canonical FA 18:1: Oleic acid
+F11,10Z-Nonadecenoic acid,C19:1,C19H36O2,296.27153,295.26425,FA 19:1,19,1,yes,
+F12,Tuberculostearic acid,10-Me-18:0,C19H38O2,298.28718,297.27990,FA 19:0,19,0,no,another compound is the canonical FA 19:0: Nonadecanoic acid
+G1,Crotonic acid,C4:1,C4H6O2,86.03678,85.02950,FA 4:1,4,1,yes,
+G2,Caproic acid,C6:0,C6H12O2,116.08373,115.07645,FA 6:0,6,0,yes,
+G3,Heptanoic acid,C7:0,C7H14O2,130.09938,129.09210,FA 7:0,7,0,yes,
+G4,Leucate,"2-OH,4-Me-5:0",C6H12O3,132.07864,131.07137,,6,,no,not a plain fatty acid — extra oxygens or heteroatoms
+G5,Caprylic acid,C8:0,C8H16O2,144.11503,143.10775,FA 8:0,8,0,yes,
+G6,Lauric acid,C12:0,C12H24O2,200.17763,199.17035,FA 12:0,12,0,yes,
+G7,Palmitic acid,C16:0,C16H32O2,256.24023,255.23295,FA 16:0,16,0,yes,
+G8,Stearidonic acid,C18:4,C18H28O2,276.20893,275.20165,FA 18:4,18,4,yes,
+G9,gamma-Linolenic acid,C18:3,C18H30O2,278.22458,277.21730,FA 18:3,18,3,no,another compound is the canonical FA 18:3: alpha-Linolenic acid
+G10,Stearic acid,C18:0,C18H36O2,284.27153,283.26425,FA 18:0,18,0,yes,
+G11,"13,16-docosadienoic acid",C22:2,C22H40O2,336.30283,335.29555,FA 22:2,22,2,yes,
+G12,Cerotic acid,C26:0,C26H52O2,396.39673,395.38945,FA 26:0,26,0,yes,
+H1,Butyric acid,C4:0,C4H8O2,88.05243,87.04515,FA 4:0,4,0,yes,
+H2,Isovaleric acid,C5:0,C5H10O2,102.06808,101.06080,FA 5:0,5,0,no,another compound is the canonical FA 5:0: Valeric acid
+H3,3-Hexenoic acid,C6:1,C6H10O2,114.06808,113.06080,FA 6:1,6,1,yes,
+H4,Pelargonic acid,C9:0,C9H18O2,158.13068,157.12340,FA 9:0,9,0,yes,
+H5,Azelaic acid,C9:0,C9H16O4,188.10486,187.09758,,9,,no,not a plain fatty acid — extra oxygens or heteroatoms
+H6,Punicic acid,C18:3,C18H30O2,278.22458,277.21730,FA 18:3,18,3,no,another compound is the canonical FA 18:3: alpha-Linolenic acid
+H7,trans-vaccenic acid,C18:1,C18H34O2,282.25588,281.24860,FA 18:1,18,1,no,another compound is the canonical FA 18:1: Oleic acid
+H8,Ricinoleic acid,C18:1,C18H34O3,298.25079,297.24352,,18,,no,not a plain fatty acid — extra oxygens or heteroatoms
+H9,Aleuritic acid,C13:0,C16H32O5,304.22497,303.21770,,16,,no,not a plain fatty acid — extra oxygens or heteroatoms
+H10,Adrenic acid,C22:4,C22H36O2,332.27153,331.26425,FA 22:4,22,4,yes,
+H11,Docosatrienoic acid,C22:3,C22H38O2,334.28718,333.27990,FA 22:3,22,3,yes,
+H12,Erucic acid,C22:1,C22H42O2,338.31848,337.31120,FA 22:1,22,1,yes,

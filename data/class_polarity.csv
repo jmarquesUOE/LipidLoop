@@ -1,0 +1,106 @@
+class,polarity,basis,note
+# Which polarity measures a lipid class better. The facility default; a study configuration may
+# override any row and add its own. Used ONLY for classes a run identifies in BOTH polarities —
+# a class seen in one polarity is passed through untouched, whatever this file says.
+#
+# `basis` records WHY, because the two reasons age differently:
+#   chemistry  — how the class ionises. Stable; will still be true next year.
+#   library    — which polarity the current libraries can name it in. NOT a fact about the
+#                molecule, and it changes when a library does. Revisit on any library change.
+#
+# ⚠ Match is on the EXACT class string. `Cer[NS]` and `Cer[ADS]` are different classes with
+# opposite preferences, and a `Cer` prefix rule collapses them.
+#
+# ── choline headgroup: strong [M+H]+; in negative only as a formate adduct, whose response
+#    depends on mobile-phase formate, so negative is a worse measurement even when it is precise.
+PC,Pos,chemistry,quaternary ammonium gives a strong protonated ion; negative needs [M+FA-H]-
+SM,Pos,chemistry,as PC — negative is the formate adduct
+LysoPC,Pos,chemistry,as PC
+Plasmenyl-PC,Pos,chemistry,as PC
+Plasmanyl-PC,Pos,chemistry,as PC
+PC[OH],Pos,chemistry,as PC
+LysoSM,Pos,chemistry,as PC
+# ── ethanolamine and acidic headgroups: deprotonate readily, [M-H]- is the better ion
+PE,Neg,chemistry,phosphate deprotonates; [M-H]- is cleaner than [M+H]+
+Plasmenyl-PE,Neg,chemistry,as PE
+Plasmanyl-PE,Neg,chemistry,as PE
+LysoPE,Neg,chemistry,as PE
+PE-NMe,Neg,chemistry,as PE
+PE-NMe2,Neg,chemistry,as PE
+PE[OH],Neg,chemistry,as PE
+PS,Neg,chemistry,acidic headgroup
+LysoPS,Neg,chemistry,acidic headgroup
+PI,Neg,chemistry,acidic headgroup
+LysoPI,Neg,chemistry,acidic headgroup
+PG,Neg,chemistry,acidic headgroup
+LysoPG,Neg,chemistry,acidic headgroup
+PA,Neg,chemistry,acidic headgroup
+BMP,Neg,chemistry,acidic headgroup — an isomer of PG and measured the same way
+CL,Neg,chemistry,two phosphates; multiply deprotonates
+CDP-DG,Neg,chemistry,acidic headgroup
+# ── neutral lipids: no acidic proton, seen as ammonium or sodium adducts in positive
+TG,Pos,chemistry,neutral; [M+NH4]+ — no negative ion to speak of
+Alkanyl-TG,Pos,chemistry,as TG
+Alkenyl-TG,Pos,chemistry,as TG
+d5TG,Pos,chemistry,as TG
+DG,Pos,chemistry,as TG
+MG,Pos,chemistry,as TG
+CE,Pos,chemistry,neutral sterol ester; [M+NH4]+
+AC,Pos,chemistry,permanently charged quaternary ammonium
+SP,Pos,chemistry,free amine protonates readily
+S1P,Pos,chemistry,free amine — but the phosphate also gives [M-H]-; revisit if both appear
+# ── sphingolipids. ⚠ EVERY row below is `library`, not chemistry: which ceramide subclasses can
+#    be named in positive depends on Ceramides_Positive, which covers phyto bases and not dihydro.
+#    Extend that library and these become both-polarity classes for the first time.
+Cer[NS],Pos,library,named in positive by Ceramides_Positive; negative also gives [M-H]-
+Cer[NP],Pos,library,phyto base — covered by Ceramides_Positive
+HexCer[NS],Pos,library,as Cer[NS]
+CerP,Pos,chemistry,phosphate deprotonates but the library names it in positive; revisit if both appear
+Cer[NDS],Neg,library,not named in positive by Ceramides_Positive — see the DS warning below
+Cer[ADS],Neg,library,not named in positive by Ceramides_Positive — central to the ceramide project
+Cer[AP],Neg,library,alpha-hydroxy phyto — negative only in the current libraries
+GlcCer[NDS],Neg,library,as Cer[NDS]
+GlcCer[AP],Neg,library,as Cer[AP]
+SHexCer,Neg,chemistry,sulfate — strongly acidic
+GM3-NANA,Neg,chemistry,"Ganglioside. The N-acetylneuraminic acid carries a carboxylate, so [M-H]- dominates — the same basis as PS/PI/PG/PA/SHexCer above. Declared 2026-08-27 after Rat_Heart_Lumos identified it in BOTH polarities and refused to choose. Negative scores far better (dot 997-999, reverse 1000, against 786-885 in positive) but names only sum compositions; positive resolves chains. Neither is lost: the cross-polarity carry-over records the positive chains on the negative row, matched on composition and confirmed at ΔRT +0.014 to +0.024 min. GM3-NGNA was deliberately NOT declared while it appeared in negative only; it has its own row as of 2026-09-21, when a wider MS2 window put it in both."
+GM2-NANA,Neg,chemistry,"Ganglioside, same NANA carboxylate basis as GM3-NANA above. Declared 2026-09-04 after PDAC_KPC_Set3 identified it in BOTH polarities and refused to choose. Negative scores far better and resolves five species (d34:1 dot 963/rev 1000, d34:2 848/1000, d40:2 953/1000, d42:2 772/1000, d42:3 804/1000) against positive's single weak hit (d34:1, dot 845/rev 939) — the same pattern as GM3-NANA, now confirmed on a second, independent dataset."
+# ── fatty acids
+FA,Neg,chemistry,carboxylate deprotonates; the library has no positive entries at all
+# ⚠⚠ THE `DS` LETTER IS NOT A READABLE CHEMICAL CLAIM, so do not justify a row with it.
+# Two independent reviews measured it: `Cer[NS]` and `Cer[NDS]` are mass-identical across all 1,204
+# shared compositions, both enumerate base double bonds 0-4, and 11 of 37 chain-resolved DS-labelled
+# rows in a delivered table carry an explicitly UNSATURATED base (`Cer[NDS] d18:1_16:0` — read
+# literally, an N-acyl DIHYDROsphingosine whose base has a double bond). The fragment lists differ
+# between the two labels, so the libraries are not duplicating rows, but nothing in the NAME or the
+# MASS carries the distinction. Where the bracket letter and the written base composition disagree,
+# the composition is what the mass supports. Two rows above previously read "dihydro base absent
+# from Ceramides_Positive"; the observation was right, the reason was not.
+#
+# ⚠ FOUR CLASSES WITH THOUSANDS OF LIBRARY ENTRIES ARE DELIBERATELY ABSENT from this table:
+# `Cer[AS]` (2,404), `Cer[BS]` (2,404), `Cer[BDS]` (1,204), `GlcCer[NS]` (1,806). A class with no
+# rule passes through untouched, which is silent — but ADDING a rule ENABLES deletion in one
+# polarity, and a wrong guess deletes real lipids. `Cer[AS]` and `Cer[BS]` are mass-identical to
+# each other across all 1,272 shared compositions and are decided by which entry wins a dot product;
+# `Cer[BS] d18:0_17:0` has already reached `Neg/Unfiltered_Results.csv` at Purity 100. Add a rule
+# only when a class actually appears in a delivered run, and on chemistry rather than on a letter.
+# Also absent and undeclared: `PG[OH]`, `PS[OH]`, `PIP`, `LysoPA`, `Methyl-PA`,
+# `Cholesterol` and the oxylipins. Of the gangliosides only `GM3-NANA`, `GM2-NANA` and
+# `GM3-NGNA` are declared (see their rows);
+# the rest stay undeclared until they actually appear in both polarities of a delivered run.
+BA,negative,chemistry,"Bile acids carry a carboxylate; [M-H]- is the dominant form and positive mode gives little. Imported from the MS-DIAL atlas (CC-BY 4.0), which files them under the ST prefix — relabelled BA so they do not share a retention surface with sterols, which elute nothing like them."
+Cer[EOS],positive,chemistry,"Omega-esterified ceramide. Imported from the MS-DIAL atlas (CC-BY 4.0) as [M+H]+; no negative-mode entries exist in that source."
+HexCer[EOS],positive,chemistry,"As Cer[EOS], with the hexose."
+ASM,positive,chemistry,"Acyl sphingomyelin, [M+H]+ only in the source library."
+AHexCer,positive,chemistry,"Acyl hexosylceramide, [M+H]+ only in the source library."
+GM3-NGNA,Neg,chemistry,"Ganglioside. The N-glycolylneuraminic acid carries the same carboxylate as NANA, so [M-H]- dominates — identical basis to the GM3-NANA and GM2-NANA rows above. Declared 2026-09-21 after a facility heart and plasma study identified it in BOTH polarities, Heart and Plasma. It had been held back as negative-only; that was an artefact of ms2_tol 0.01 on ion-trap MS2 (see the developer notes (ION_TRAP_MS2, not distributed)) — at 0.2 Da positive finds it too. Same split as GM3-NANA: negative scores far better (dot 967-991, reverse 1000) but names only sum compositions at Purity 0; positive is weaker (dot 658-939, reverse 939-954) and resolves chains at Purity 92-100 (d18:1_18:0, d18:1_24:0). Neither is lost — the cross-polarity carry-over records the positive chains on the negative row."
+PI[OH],Neg,chemistry,"Hydroxylated phosphatidylinositol — as PI, the acidic headgroup decides it, the same reasoning as the PE[OH] row above. Declared 2026-09-21 on a facility heart and plasma study: negative resolves three species with chains at Purity 94-100 (OH-17:1_19:1, OH-38:4, OH-36:3), positive has one sum composition at Purity 0."
+# ── prenol lipids (LIPID MAPS category PR). Declared 2026-10-02 with Ubiquinones_Positive, the
+#    first entries this pipeline has ever held for the category. Positive-only on chemistry AND
+#    on library: the quinone ring has no acidic proton, [M+NH4]+ dominates with [M+H]+ and
+#    [M+Na]+ beside it at the same retention, and no negative-mode quinone library exists here.
+#    ⚠ `CoQ10H2` is the reduced form and is NOT decided by this file. It is 10 ppm from the
+#    `CoQ10` M+2 isotope, inside MS1_TOL, and separable only by retention — run
+#    scripts/check_ubiquinol_rt.py on any run that reports it. the developer notes (PRENOL_QUINONES, not distributed).
+CoQ9,Pos,chemistry,"Ubiquinone-9. Neutral prenol quinone; [M+NH4]+ dominant, no deprotonation site."
+CoQ10,Pos,chemistry,"Ubiquinone-10. As CoQ9 — measured here at RT 21.07, [M+NH4]+ 880.7177."
+CoQ10H2,Pos,chemistry,"Ubiquinol-10, the reduced form. As CoQ10, and it elutes ~1.5 min EARLIER (19.5) because two hydroxyls replace two ketones. Read the warning above before delivering it."
